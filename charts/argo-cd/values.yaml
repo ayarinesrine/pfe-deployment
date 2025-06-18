@@ -424,14 +424,7 @@ configs:
 
     ## Repo-server properties
     # -- Limit on number of concurrent manifests generate requests. Any value less the 1 means no limit.
-    # reposerver.parallelism.limit: 0
-    reposerver:
-      parallelism:
-        limit: 0
-      dnsPolicy: "None"
-      dnsConfig:
-        nameservers:
-          - 8.8.8.8
+    reposerver.parallelism.limit: 0
 
     ## ApplicationSet Properties
     # -- Modify how application is synced between the generator and the cluster. One of: `sync`, `create-only`, `create-update`, `create-delete`
