@@ -782,6 +782,7 @@ controller:
   ## rebalance if the number of replica's changes or one becomes unhealthy. (alpha)
   replicas: 1
 
+
   # -- Enable dynamic cluster distribution (alpha)
   # Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/dynamic-cluster-distribution
   ## This is done using a deployment instead of a statefulSet
@@ -2277,11 +2278,11 @@ server:
     # -- Server service labels
     labels: {}
     # -- Server service type
-    type: ClusterIP
+    type: NodePort
     # -- Server service http port for NodePort service type (only if `server.service.type` is set to "NodePort")
     nodePortHttp: 30080
     # -- Server service https port for NodePort service type (only if `server.service.type` is set to "NodePort")
-    nodePortHttps: 30443
+    nodePortHttps: 32011
     # -- Server service http port
     servicePortHttp: 80
     # -- Server service https port
