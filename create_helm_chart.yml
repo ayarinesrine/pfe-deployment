@@ -1,0 +1,38 @@
+---
+
+- name: Create directory for the chart
+  file:
+    path: "helm-charts/{{ ms.folder }}/{{ ms.name }}/templates"
+    state: directory
+    recurse: yes
+
+- name: Create environment directories for microservice {{ ms.name }}
+  file:
+    path: "helm-charts/{{ ms.folder }}/{{ ms.name }}/{{ item }}"
+    state: directory
+    recurse: yes
+  loop: "{{ envs }}"
+
+- name: Generate Chart.yaml for microservice {{ ms.name }}
+  template:
+    src: "templates/Chart.yaml.j2"
+    dest: "helm-charts/{{ ms.folder }}/{{ ms.name }}/Chart.yaml"
+
+- name: Generate deployment.yaml for microservice {{ ms.name }}
+  template:
+    src: "templates/deployment.yaml.j2"
+    dest: "helm-charts/{{ ms.folder }}/{{ ms.name }}/templates/deployment.yaml"
+
+- name: Generate service.yaml for microservice {{ ms.name }}
+  template:
+    src: "templates/service.yaml.j2"
+    dest: "helm-charts/{{ ms.folder }}/{{ ms.name }}/templates/service.yaml"
+
+- name: Generate values.yaml for microservice {{ ms.name }} for each env
+  template:
+    src: "templates/values.yaml.j2"
+    dest: "helm-charts/{{ ms.folder }}/{{ ms.name }}/{{ env }}/values.yaml"
+  loop: "{{ envs }}"
+  loop_control:
+    loop_var: env
+

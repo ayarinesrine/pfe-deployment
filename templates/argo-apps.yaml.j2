@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ ms.name }}-{{ env }}
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ayarinesrine/pfe-deployment.git
+    targetRevision: main
+    path: helm-charts/{{ ms.folder }}/{{ ms.name }}
+    helm:
+      valueFiles:
+        - {{ env }}/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ env }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,0 +1,14 @@
+name: authentification
+app: authentification
+replicaCount: 1
+
+image:
+  repository: 192.168.100.200/pfe-backend/authentification
+  tag: 72
+
+service:
+  type: NodePort
+  port: 3011
+  nodePort: 32011
+  
+secrets: authentification-secrets 

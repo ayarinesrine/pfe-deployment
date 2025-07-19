@@ -1,0 +1,116 @@
+microservices:
+# -------------------------------------  backend    -------------------------------
+
+# ------------- authentification ---------------
+
+  - name: authentification
+    app: authentification
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-backend/authentification
+      tag: 72
+    service:
+      type: NodePort
+      port: 3011      
+      nodePort: 32011 
+    secrets: authentification-secrets
+    folder: backend
+    namespace: dev
+
+
+# ------------- devis-en-ligne ---------------
+
+  - name: devis-en-ligne
+    app: devis-en-ligne
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-backend/devis-en-ligne
+      tag: 72
+    service:
+      type: NodePort
+      port: 3012      
+      nodePort: 32012  
+    secrets: devis-en-ligne-secrets
+    folder: backend
+    namespace: dev
+
+
+# ------------- offre-d-emplois ---------------
+
+  - name: offre-d-emplois
+    app: offre-d-emplois
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-backend/offre-d-emplois
+      tag: 72
+    service:
+      type: NodePort
+      port: 3010      
+      nodePort: 32010
+    secrets: offre-d-emplois-secrets
+    folder: backend
+    namespace: dev
+
+
+# ------------- upload ---------------
+
+  - name: upload
+    app: upload
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-backend/upload
+      tag: 72
+    service:
+      type: NodePort
+      port: 3013      
+      nodePort: 32013
+    secrets: upload-secrets
+    folder: backend
+    namespace: dev
+# -------------------------------------  frontend    -------------------------------
+
+# ------------- dashbord ---------------
+
+  - name: dashbord
+    app: dashbord
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-frontend/dashbord
+      tag: 35
+    service:
+      type: NodePort
+      port: 3002      
+      nodePort: 32001 
+    folder: frontend
+    namespace: dev
+
+# ------------- dynamique ---------------
+
+  - name: dynamique
+    app: dynamique
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-frontend/dynamique
+      tag: 35
+    service:
+      type: NodePort
+      port: 3000     
+      nodePort: 32000 
+    folder: frontend
+    namespace: dev
+
+# ------------- statique ---------------
+
+  - name: statique
+    app: statique
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-frontend/statique
+      tag: 35
+    service:
+      type: NodePort
+      port: 3001      
+      nodePort: 32002   
+    folder: frontend
+    namespace: dev
+  

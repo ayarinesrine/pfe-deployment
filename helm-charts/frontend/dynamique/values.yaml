@@ -1,0 +1,13 @@
+name: dynamique
+app: dynamique
+replicaCount: 1
+
+image:
+  repository: 192.168.100.200/pfe-frontend/dynamique
+  tag: 35
+
+service:
+  type: NodePort
+  port: 3000
+  nodePort: 32000
+  

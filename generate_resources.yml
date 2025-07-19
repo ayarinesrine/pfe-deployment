@@ -1,0 +1,23 @@
+- hosts: localhost
+  gather_facts: no
+  vars_files:
+    - vars/microservices.yml
+
+  vars:
+    envs:
+      - dev
+      - test
+      - prod
+
+  tasks:
+    - name: Create helm chart for each microservice
+      include_tasks: create_helm_chart.yml
+      loop: "{{ microservices }}"
+      loop_control:
+        loop_var: ms
+
+    - name: Create ArgoCD app for each microservice
+      include_tasks: create_argocd_app.yml
+      loop: "{{ microservices }}"
+      loop_control:
+        loop_var: ms

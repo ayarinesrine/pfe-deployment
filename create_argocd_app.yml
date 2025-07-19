@@ -1,0 +1,20 @@
+---
+- name: Create directory for ArgoCD apps for each env
+  file:
+    path: "argo-apps/{{ env }}"
+    state: directory
+    recurse: yes
+  loop: "{{ envs }}"
+  loop_control:
+    loop_var: env
+
+- name: Generate ArgoCD app for {{ ms.name }} in each env
+  template:
+    src: "templates/argo-apps.yaml.j2"
+    dest: "argo-apps/{{ env }}/{{ ms.name }}.yaml"
+  loop: "{{ envs }}"
+  loop_control:
+    loop_var: env
+  vars:
+    namespace: "{{ env }}"
+    env: "{{ env }}"

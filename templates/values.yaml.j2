@@ -1,0 +1,16 @@
+name: {{ ms.name }}
+app: {{ ms.app }}
+replicaCount: {{ ms.replicaCount }}
+
+image:
+  repository: {{ ms.image.repository }}
+  tag: {{ ms.image.tag }}
+
+service:
+  type: {{ ms.service.type }}
+  port: {{ ms.service.port }}
+  nodePort: {{ ms.service.nodePort }}
+  
+{% if ms.folder == "backend" %}
+secrets: {{ ms.secrets }} 
+{% endif %}

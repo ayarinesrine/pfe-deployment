@@ -1,0 +1,14 @@
+name: upload
+app: upload
+replicaCount: 1
+
+image:
+  repository: 192.168.100.200/pfe-backend/upload
+  tag: 72
+
+service:
+  type: NodePort
+  port: 3013
+  nodePort: 32013
+  
+secrets: upload-secrets 
