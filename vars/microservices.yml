@@ -80,7 +80,7 @@ microservices:
     service:
       type: NodePort
       port: 3002      
-      nodePort: 32001 
+      nodePort: 32002 
     folder: frontend
     namespace: dev
 
@@ -110,7 +110,7 @@ microservices:
     service:
       type: NodePort
       port: 3001      
-      nodePort: 32002   
+      nodePort: 32001   
     folder: frontend
     namespace: dev
   
