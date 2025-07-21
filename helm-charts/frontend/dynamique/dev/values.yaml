@@ -11,4 +11,3 @@ service:
   port: 3000
   nodePort: 32000
   
-secrets: dynamique-secrets
