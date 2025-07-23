@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: testHelm-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ayarinesrine/pfe-deployment.git
+    targetRevision: main
+    path: helm-charts/backend/testHelm
+    helm:
+      valueFiles:
+        - dev/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

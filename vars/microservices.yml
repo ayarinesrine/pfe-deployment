@@ -18,6 +18,24 @@ microservices:
     namespace: dev
 
 
+
+# ------------- testHelm ---------------
+
+  - name: testHelm
+    app: testHelm
+    replicaCount: 1
+    image:
+      repository: 192.168.100.200/pfe-backend/testHelm
+      tag: 74
+    service:
+      type: NodePort
+      port: 3011      
+      nodePort: 32011 
+    secrets: testHelm-secrets
+    folder: backend
+    namespace: dev
+
+
 # ------------- devis-en-ligne ---------------
 
   - name: devis-en-ligne
