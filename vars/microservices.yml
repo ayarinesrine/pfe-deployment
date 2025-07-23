@@ -8,7 +8,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/authentification
-      tag: 74
+      tag: 72
     service:
       type: NodePort
       port: 3011      
@@ -26,7 +26,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/testHelm
-      tag: 74
+      tag: 72
     service:
       type: NodePort
       port: 3011      
@@ -43,7 +43,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/devis-en-ligne
-      tag: 74
+      tag: 72
     service:
       type: NodePort
       port: 3012      
@@ -60,7 +60,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/offre-d-emplois
-      tag: 74
+      tag: 72
     service:
       type: NodePort
       port: 3010      
@@ -77,7 +77,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/upload
-      tag: 74
+      tag: 72
     service:
       type: NodePort
       port: 3013      
@@ -94,7 +94,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-frontend/dashbord
-      tag: 37
+      tag: 35
     service:
       type: NodePort
       port: 3002      
@@ -109,7 +109,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-frontend/dynamique
-      tag: 37
+      tag: 35
     service:
       type: NodePort
       port: 3000     
@@ -124,7 +124,7 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-frontend/statique
-      tag: 37
+      tag: 35
     service:
       type: NodePort
       port: 3001      
