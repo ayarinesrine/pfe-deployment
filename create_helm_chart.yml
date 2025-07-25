@@ -1,5 +1,4 @@
 ---
-
 - name: Create directory for the chart
   file:
     path: "helm-charts/{{ ms.folder }}/{{ ms.name }}/templates"
@@ -35,4 +34,3 @@
   loop: "{{ envs }}"
   loop_control:
     loop_var: env
-

@@ -11,27 +11,12 @@ microservices:
       tag: 72
     service:
       type: NodePort
-      port: 3011      
-      nodePort: 32011 
+      port: 3011
+      nodePorts:
+        dev: 32011
+        test: 32111
+        prod: 32211
     secrets: authentification-secrets
-    folder: backend
-    namespace: dev
-
-
-
-# ------------- testHelm ---------------
-
-  - name: testHelm
-    app: testHelm
-    replicaCount: 1
-    image:
-      repository: 192.168.100.200/pfe-backend/testHelm
-      tag: 72
-    service:
-      type: NodePort
-      port: 3011      
-      nodePort: 32011 
-    secrets: testHelm-secrets
     folder: backend
     namespace: dev
 
@@ -47,7 +32,10 @@ microservices:
     service:
       type: NodePort
       port: 3012      
-      nodePort: 32012  
+      nodePorts:
+        dev: 32012
+        test: 32112
+        prod: 32212
     secrets: devis-en-ligne-secrets
     folder: backend
     namespace: dev
@@ -64,7 +52,10 @@ microservices:
     service:
       type: NodePort
       port: 3010      
-      nodePort: 32010
+      nodePorts:
+        dev: 32010
+        test: 32110
+        prod: 32210
     secrets: offre-d-emplois-secrets
     folder: backend
     namespace: dev
@@ -81,7 +72,10 @@ microservices:
     service:
       type: NodePort
       port: 3013      
-      nodePort: 32013
+      nodePorts:
+        dev: 32013
+        test: 32113
+        prod: 32213
     secrets: upload-secrets
     folder: backend
     namespace: dev
@@ -98,7 +92,11 @@ microservices:
     service:
       type: NodePort
       port: 3002      
-      nodePort: 32002 
+      nodePorts:
+        dev: 32002
+        test: 32102
+        prod: 32202
+    secrets: dashboard-secrets
     folder: frontend
     namespace: dev
 
@@ -113,7 +111,11 @@ microservices:
     service:
       type: NodePort
       port: 3000     
-      nodePort: 32000 
+      nodePorts:
+        dev: 32000
+        test: 32100
+        prod: 32200
+    secrets: dynamique-secrets
     folder: frontend
     namespace: dev
 
@@ -128,7 +130,11 @@ microservices:
     service:
       type: NodePort
       port: 3001      
-      nodePort: 32001   
+      nodePorts:
+        dev: 32001
+        test: 32101
+        prod: 32201  
+    secrets: statique-secrets
     folder: frontend
     namespace: dev
   

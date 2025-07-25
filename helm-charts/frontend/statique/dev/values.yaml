@@ -4,10 +4,11 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-frontend/statique
-  tag: 39
+  tag: 35
 
 service:
   type: NodePort
   port: 3001
   nodePort: 32001
   
+secrets: statique-secrets 
