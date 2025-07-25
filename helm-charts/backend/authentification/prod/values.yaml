@@ -9,6 +9,6 @@ image:
 service:
   type: NodePort
   port: 3011
-  nodePort: 32011
+  nodePort: 32211
   
 secrets: authentification-secrets 
