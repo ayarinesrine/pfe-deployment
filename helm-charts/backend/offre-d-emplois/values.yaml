@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-backend/offre-d-emplois
-  tag: 73
+  tag: 74
 
 service:
   type: NodePort
