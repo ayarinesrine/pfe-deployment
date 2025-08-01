@@ -18,7 +18,7 @@ microservices:
         prod: 32211
     secrets: authentification-secrets
     folder: backend
-    namespace: dev
+    # namespace: dev
 
 
 # ------------- devis-en-ligne ---------------
@@ -38,7 +38,7 @@ microservices:
         prod: 32212
     secrets: devis-en-ligne-secrets
     folder: backend
-    namespace: dev
+    # namespace: dev
 
 
 # ------------- offre-d-emplois ---------------
@@ -58,7 +58,7 @@ microservices:
         prod: 32210
     secrets: offre-d-emplois-secrets
     folder: backend
-    namespace: dev
+    # namespace: dev
 
 
 # ------------- upload ---------------
@@ -78,7 +78,7 @@ microservices:
         prod: 32213
     secrets: upload-secrets
     folder: backend
-    namespace: dev
+    # namespace: dev
 # -------------------------------------  frontend    -------------------------------
 
 # ------------- dashbord ---------------
@@ -98,7 +98,7 @@ microservices:
         prod: 32202
     secrets: dashboard-secrets
     folder: frontend
-    namespace: dev
+    # namespace: dev
 
 # ------------- dynamique ---------------
 
@@ -117,7 +117,7 @@ microservices:
         prod: 32200
     secrets: dynamique-secrets
     folder: frontend
-    namespace: dev
+    # namespace: dev
 
 # ------------- statique ---------------
 
@@ -136,5 +136,5 @@ microservices:
         prod: 32201  
     secrets: statique-secrets
     folder: frontend
-    namespace: dev
+    # namespace: dev
   

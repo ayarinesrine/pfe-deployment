@@ -11,4 +11,4 @@ service:
   port: 3010
   nodePort: 32210
   
-secrets: offre-d-emplois-secrets
+secrets: offre-d-emplois-secrets 
