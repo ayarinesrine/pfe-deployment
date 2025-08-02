@@ -8,7 +8,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/authentification
-      tag: 74
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3011
@@ -18,7 +21,7 @@ microservices:
         prod: 32211
     secrets: authentification-secrets
     folder: backend
-    # namespace: dev
+    
 
 
 # ------------- devis-en-ligne ---------------
@@ -28,7 +31,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/devis-en-ligne
-      tag: 74
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3012      
@@ -38,7 +44,7 @@ microservices:
         prod: 32212
     secrets: devis-en-ligne-secrets
     folder: backend
-    # namespace: dev
+    
 
 
 # ------------- offre-d-emplois ---------------
@@ -48,7 +54,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/offre-d-emplois
-      tag: 74
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3010      
@@ -58,7 +67,7 @@ microservices:
         prod: 32210
     secrets: offre-d-emplois-secrets
     folder: backend
-    # namespace: dev
+    
 
 
 # ------------- upload ---------------
@@ -68,7 +77,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-backend/upload
-      tag: 74
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3013      
@@ -78,7 +90,7 @@ microservices:
         prod: 32213
     secrets: upload-secrets
     folder: backend
-    # namespace: dev
+    
 # -------------------------------------  frontend    -------------------------------
 
 # ------------- dashbord ---------------
@@ -88,7 +100,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-frontend/dashbord
-      tag: 40
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3002      
@@ -98,7 +113,7 @@ microservices:
         prod: 32202
     secrets: dashboard-secrets
     folder: frontend
-    # namespace: dev
+    
 
 # ------------- dynamique ---------------
 
@@ -107,7 +122,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-frontend/dynamique
-      tag: 40
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3000     
@@ -117,7 +135,7 @@ microservices:
         prod: 32200
     secrets: dynamique-secrets
     folder: frontend
-    # namespace: dev
+    
 
 # ------------- statique ---------------
 
@@ -126,7 +144,10 @@ microservices:
     replicaCount: 1
     image:
       repository: 192.168.100.200/pfe-frontend/statique
-      tag: 40
+      tag:
+        dev: dev-1
+        test: test-1
+        prod: prod-1
     service:
       type: NodePort
       port: 3001      
@@ -136,5 +157,5 @@ microservices:
         prod: 32201  
     secrets: statique-secrets
     folder: frontend
-    # namespace: dev
+    
   

@@ -4,7 +4,7 @@ replicaCount: {{ ms.replicaCount }}
 
 image:
   repository: {{ ms.image.repository }}
-  tag: {{ ms.image.tag }}
+  tag: {{ ms.image.tag[env] }}
 
 service:
   type: {{ ms.service.type }}
