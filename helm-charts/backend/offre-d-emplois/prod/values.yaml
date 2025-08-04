@@ -4,11 +4,11 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-backend/offre-d-emplois
-  tag: prod-2
+  tag: prod-1
 
 service:
   type: NodePort
   port: 3010
   nodePort: 32210
-  
-secrets: offre-d-emplois-secrets 
+
+secrets: offre-d-emplois-secrets

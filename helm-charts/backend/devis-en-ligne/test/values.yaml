@@ -10,5 +10,5 @@ service:
   type: NodePort
   port: 3012
   nodePort: 32112
-  
-secrets: devis-en-ligne-secrets 
+
+secrets: devis-en-ligne-secrets

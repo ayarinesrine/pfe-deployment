@@ -4,11 +4,11 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-backend/authentification
-  tag: dev-2
+  tag: dev-1
 
 service:
   type: NodePort
   port: 3011
   nodePort: 32011
-  
-secrets: authentification-secrets 
+
+secrets: authentification-secrets

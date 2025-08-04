@@ -10,5 +10,5 @@ service:
   type: NodePort
   port: 3011
   nodePort: 32111
-  
-secrets: authentification-secrets 
+
+secrets: authentification-secrets

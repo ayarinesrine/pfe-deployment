@@ -4,11 +4,10 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-frontend/dashbord
-  tag: prod-5
+  tag: prod-1
 
 service:
   type: NodePort
   port: 3002
   nodePort: 32202
-  
-secrets: dashboard-secrets 
+

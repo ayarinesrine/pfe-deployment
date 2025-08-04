@@ -10,5 +10,5 @@ service:
   type: NodePort
   port: 3010
   nodePort: 32110
-  
-secrets: offre-d-emplois-secrets 
+
+secrets: offre-d-emplois-secrets

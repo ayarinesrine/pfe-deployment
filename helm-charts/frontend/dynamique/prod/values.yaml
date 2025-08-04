@@ -4,11 +4,10 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-frontend/dynamique
-  tag: prod-5
+  tag: prod-1
 
 service:
   type: NodePort
   port: 3000
   nodePort: 32200
-  
-secrets: dynamique-secrets 
+

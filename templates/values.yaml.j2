@@ -10,5 +10,8 @@ service:
   type: {{ ms.service.type }}
   port: {{ ms.service.port }}
   nodePort: {{ ms.service.nodePorts[env] }}
-  
-secrets: {{ ms.secrets }} 
+
+{% if ms.folder == 'backend' %}
+secrets: {{ ms.secrets }}
+{% endif %}
+
