@@ -4,11 +4,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-backend/upload
-<<<<<<< HEAD
   tag: test-1
-=======
-  tag: test-7
->>>>>>> b0381cba36951307f1ad4830338b34d0cf1587e3
 
 service:
   type: NodePort
