@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-backend/authentification
-  tag: dev-9
+  tag: dev-10
 
 service:
   type: NodePort
