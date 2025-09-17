@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-backend/devis-en-ligne
-  tag: dev-8
+  tag: dev-9
 
 service:
   type: NodePort
