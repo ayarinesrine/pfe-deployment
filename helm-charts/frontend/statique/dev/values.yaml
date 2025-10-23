@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-frontend/statique
-  tag: dev-41
+  tag: dev-37
 
 service:
   type: NodePort
