@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 192.168.100.200/pfe-frontend/dynamique
-  tag: dev-34
+  tag: dev-38
 
 service:
   type: NodePort
